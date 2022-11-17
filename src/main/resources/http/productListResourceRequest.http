@@ -1,0 +1,15 @@
+### Create product list
+POST http://localhost:8080/product-list
+Content-Type: application/json
+
+{
+  "name": "My list"
+}
+
+### Add product to product list
+POST http://localhost:8080/product-list/product?productListId=4&productId=7
+
+
+### Get product list
+GET http://localhost:8080/product-list/4
+

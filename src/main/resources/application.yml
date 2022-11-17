@@ -2,16 +2,12 @@ spring:
   application:
     name: product-list-service
   datasource:
-    hikari:
-      maximum-pool-size: 5
-      max-lifetime: 300000
-      minimum-idle: 5
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/postgres?currentSchema=product_service
+    url: jdbc:postgresql://localhost:5433/product-service-db
     username: postgres
-    password: 89142330186ula
-
-  flyway:
-    schemas: product_service
-    user: postgres
-    password: 89142330186ula
+    password: postgres
+  jpa:
+    hibernate:
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+      ddl-auto: update
+    show_sql: true
